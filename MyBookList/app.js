@@ -81,7 +81,7 @@ class Store {
 	}
 
 
-	static addBook() {
+	static addBook(book) {
 		const books = Store.getBooks();
 
 		books.push(book);
@@ -93,7 +93,7 @@ class Store {
 		const books = Store.getBooks();
 
 		books.forEach((book, index) => {
-			if(books.isbn === isbn) {
+			if(book.isbn === isbn) {
 				books.splice(index, 1);
 			}
 
